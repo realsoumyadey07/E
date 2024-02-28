@@ -6,7 +6,11 @@ export default function Dashboard() {
       {/* sidebar */}
       <AdminSidebar/>
       {/* main */}
-      <main>sdfsd</main>
+      <main>
+        <div className="bar">
+          
+        </div>
+      </main>
     </div>
   )
 }

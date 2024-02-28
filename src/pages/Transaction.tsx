@@ -1,8 +1,12 @@
+import AdminSidebar from "../components/AdminSidebar";
 
 export default function Transaction() {
   return (
-    <div>
-      transaction
+    <div className="adminContainer">
+      {/* sidebar */}
+      <AdminSidebar/>
+      {/* main */}
+      <main>Transaction</main>
     </div>
   )
 }

@@ -1,8 +1,12 @@
+import AdminSidebar from "../components/AdminSidebar";
 
 export default function Customers() {
   return (
-    <div>
-      customer
+    <div className="adminContainer">
+      {/* sidebar */}
+      <AdminSidebar/>
+      {/* main */}
+      <main>Customers</main>
     </div>
   )
 }
