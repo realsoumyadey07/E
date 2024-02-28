@@ -73,6 +73,9 @@ const WidgetItem = ({
           percent>0? <span className="green"> <HiTrendingUp/> +{percent}%{" "} </span> : <span> <HiTrendingUp/> -{percent}%{" "} </span>
         }
       </div>
+      <div className="widgetCircle">
+        <span color={color}>{percent}%</span>
+      </div>
     </article>
   )
 }
