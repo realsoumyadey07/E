@@ -10,4 +10,16 @@
                @include inputStyle(100%,1rem 0 );
           }
      }
+     .widgetcontainer{
+          @include flex(row, space-between, stretch, 2rem);
+          padding: 2rem 2rem 2rem 0;
+          .widget{
+               width: 16rem;
+               background-color: white;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
+               padding: 2rem;
+               border-radius: 10px;
+               @include flex(row, space-between, stretch, 0);
+          }
+     }
 }
