@@ -1,11 +1,12 @@
 import { FaRegBell } from "react-icons/fa";
 import AdminSidebar from "../components/AdminSidebar";
 import { BsSearch } from "react-icons/bs";
-
 import { FaUser } from "react-icons/fa6";
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import data from "../assets/data.json";
-import { BarChart } from "../components/Charts";
+import { BarChart, DoughnutChart } from "../components/Charts";
+import { BiMaleFemale } from "react-icons/bi";
+
 
 export default function Dashboard() {
   return (
@@ -53,12 +54,13 @@ export default function Dashboard() {
             <h2>Revenue & Transaction</h2>
             {/* graph here */}
             <BarChart
-              data_1={[300, 144, 433, 655, 237, 755, 190]}
-              data_2={[200, 424, 293, 105, 386, 187, 458]}
+              data_1={[300, 144, 433, 655, 237, 755, 190, 456, 123, 567,789, 890]}
+              data_2={[200, 424, 293, 105, 386, 187, 458, 467,134,245,256,345]}
               title_1="Revenue"
               title_2="Transaction"
               bgColor_1="rgb(0, 115, 255)"
               bgColor_2="rgb(53, 162, 235, 0.8)"
+              
             />
           </div>
           <div className="dashboard-categories">
@@ -73,6 +75,21 @@ export default function Dashboard() {
               ))}
             </div>
           </div>
+        </section>
+        <section className="transaction-container">
+          <div className="gender-chart">
+            <h2>Gender Ratio</h2>
+            {/* chart */}
+            <DoughnutChart 
+            labels={["Feamale", "Male"]} 
+            data={[12, 19]} 
+            bgColor={["hsl(340, 82%, 56%", "rgba(53, 162, 235, 0.8)"]}/>
+            <p>
+              <BiMaleFemale/>
+            </p>
+          </div>
+          {/* table */}
+
         </section>
       </main>
     </div>

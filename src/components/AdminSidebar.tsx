@@ -17,37 +17,6 @@ export default function AdminSidebar() {
   );
 }
 
-interface LiProps {
-  url: string;
-  text: string;
-  location: Location;
-  Icon: IconType;
-}
-
-const Li = ({ url, text, location, Icon }: LiProps) => {
-  return (
-    <li
-      style={{
-        background: location.pathname.includes(url)
-          ? "rgba(0,115,255,0.1)"
-          : "white",
-      }}
-    >
-      <Link
-        to={url}
-        style={{
-          color: location.pathname.includes(url)
-            ? "rgba(0, 0, 0, 0.5)"
-            : "black",
-        }}
-      >
-        <Icon />
-        {text}
-      </Link>
-    </li>
-  );
-};
-
 const DiveOne = ({location}: {location: Location})=>{
   return(
     <div>
@@ -138,3 +107,34 @@ const DiveThree = ({location}: {location: Location})=>{
       </div>
   )
 }
+
+interface LiProps {
+  url: string;
+  text: string;
+  location: Location;
+  Icon: IconType;
+}
+
+const Li = ({ url, text, location, Icon }: LiProps) => {
+  return (
+    <li
+      style={{
+        background: location.pathname.includes(url)
+          ? "rgba(0,115,255,0.1)"
+          : "white",
+      }}
+    >
+      <Link
+        to={url}
+        style={{
+          color: location.pathname.includes(url)
+            ? "rgba(0, 0, 0, 0.5)"
+            : "black",
+        }}
+      >
+        <Icon />
+        {text}
+      </Link>
+    </li>
+  );
+};
