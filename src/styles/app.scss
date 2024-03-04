@@ -97,9 +97,9 @@ a {
       }
       a {
         text-decoration: none;
-        background-color: rgba(44, 104, 255, 0.455);
-        color: rgba(44, 104, 255);
-        padding: 0.25rem 0.5rem;
+        background-color: rgba(11, 80, 253, 0.87);
+        color: rgb(255, 255, 255);
+        padding: .5rem 0.8rem;
         border-radius: 10px;
       }
       button {
@@ -135,7 +135,7 @@ a {
     outline: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgba(0,115,255);
+    background-color: rgb(0, 115, 255);
     color: white;
     &:disabled{
       background-color: rgba(0, 115, 255, 0.1);
