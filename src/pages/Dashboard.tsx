@@ -6,6 +6,7 @@ import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import data from "../assets/data.json";
 import { BarChart, DoughnutChart } from "../components/Charts";
 import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from '../components/DashboardTable';
 
 
 export default function Dashboard() {
@@ -66,8 +67,9 @@ export default function Dashboard() {
           <div className="dashboard-categories">
             <h2>Inventory</h2>
             <div>
-              {data.categories.map((i) => (
+              {data.categories.map((i, index) => (
                 <CategoryItem
+                  key={index}
                   heading={i.heading}
                   value={i.value}
                   color={`hsl(${i.value * 4}, ${i.value}%, 50%)`}
@@ -89,7 +91,7 @@ export default function Dashboard() {
             </p>
           </div>
           {/* table */}
-
+                <DashboardTable data={data.transaction}/>
         </section>
       </main>
     </div>
