@@ -3,9 +3,9 @@ import AdminSidebar from "../../components/AdminSidebar";
 
 export default function NewProduct() {
   const [name, setName] = useState<string>("");
-  const [stock, setStock] = useState<number>(0);
-  const [price, setPrice] = useState<number>(0);
-  const [photo, setPhoto] = useState<string>("");
+  const [stock, setStock] = useState<number>();
+  const [price, setPrice] = useState<number>();
+  const [photo, setPhoto] = useState<string>();
 
   const changeImageHandle = (e:ChangeEvent<HTMLInputElement>)=>{
      const file:File | undefined = e.target.files?.[0];
@@ -13,7 +13,9 @@ export default function NewProduct() {
      if(file){
           reader.readAsDataURL(file);
           reader.onloadend =()=>{
-               if(reader.result==="string") setPhoto(reader.result);
+               if(typeof reader.result==="string") {
+                setPhoto(reader.result);
+              }
           }
      }
   }
