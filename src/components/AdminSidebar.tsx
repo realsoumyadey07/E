@@ -85,19 +85,19 @@ const DiveThree = ({location}: {location: Location})=>{
         <h5>Apps</h5>
         <ul>
           <Li
-            url="/admin/app/stopwatch"
+            url="/admin/apps/stopwatch"
             text="Stopwatch"
             location={location}
             Icon={FaStopwatch}
           />
           <Li
-            url="/admin/app/coupon"
+            url="/admin/apps/coupon"
             text="Coupon"
             location={location}
             Icon={RiCoupon3Fill}
           />
           <Li
-            url="/admin/app/toss"
+            url="/admin/apps/toss"
             text="Toss"
             location={location}
             Icon={FaGamepad}
